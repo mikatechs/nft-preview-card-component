@@ -1,0 +1,14 @@
+{
+  "name": "nft-preview-card-component",
+  "version": "1.0.0",
+  "description": "NFT preview card component",
+  "main": "index.js",
+  "scripts": {
+    "start:css": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Mamia Varshanidze",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

@@ -1,0 +1,142 @@
+//MAIN CARD CONTAINER
+.card {
+    max-width: 35rem;
+    background-color: $color-bg-card;
+    border-radius: 1.5rem;
+    box-shadow: 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 2.4rem 2.4rem 3.2rem;
+
+    @media only screen and (max-width: 25em) {
+        max-width: 32.7rem;
+    }
+
+//CARD IMAGE AND OVERLAY ON HOVER
+    &__img-container {
+        position: relative;
+        max-width: 30.2rem;
+
+    @media only screen and (max-width: 25em) {
+        max-width: 27.8rem;
+    }
+
+        &:hover .card__img-overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    &__img-main {
+        width: 100%;
+        border-radius: 0.8rem;
+    }
+
+    &__img-overlay {
+        width: 30.2rem;
+        height: 30.2rem;
+        border-radius: 0.8rem;
+        background-color: rgba(0, 255, 248, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+
+        @media only screen and (max-width: 25em) {
+            max-width: 27.8rem;
+        }
+    }
+
+//CARD ITEM DESCRIPTION - PARAGRAPH
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 2.6rem;
+    }
+
+//CARD PRICE AND DURATION
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6rem;
+
+        @media only screen and (max-width: 25em) {
+                font-size: 1.5rem;
+            }
+
+        &-value {
+            display: flex;
+            align-items: center;
+        }
+
+        &-text {
+            color: $color-primary-2;
+            font-weight: 600;
+        }
+
+        &-duration {
+            display: flex;
+            align-items: center;
+        }
+
+        &-icon {
+            margin-right: 0.77rem;
+
+            &--eth {
+                width: 1.1rem;
+                height: 1.8rem;
+            }
+
+            &--time {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+    }
+
+//HORIZONTAL LINE
+    &__line {
+        height: 0.1rem;
+        background-color: #2E405A;
+    }
+
+//CARD AUTHOR AND AUTHOR IMAGE
+    &__author {
+        display: flex;
+        align-items: center;
+        margin-top: -0.8rem;
+
+        &-img {
+            width: 3.3rem;
+            height: 3.3rem;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin-right: 1.6rem;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            @media only screen and (max-width: 25em) {
+                font-size: 1.5rem;
+            }
+
+            span {
+                color: #fff;
+
+                &:hover {
+                    color: $color-primary-2;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
